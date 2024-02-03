@@ -1,5 +1,5 @@
 ###R for biologists
-##Irina & Rao, 23/01/2024
+##Bea & Rao, 05/02/2024
 
 
 #### Cleaning data ####
@@ -46,15 +46,28 @@ migmorph[which_rows_mig1 | which_rows_elongatedness1.5, ]
 
 # Q1: Knockdown of which gene results in the highest migration?
 # # hint: this can be accomplished with the max() function
-highest_mig <- max(migmorph$migration)
-migmorph[migmorph$migration == highest_mig, "gene_symbol"]
-#alternatively
-migmorph[which.max(migmorph$migration), ]$gene_symbol
+
+
 # Q2: Make a new data.frame that has only rows with 0.9 > migration > 0.4 AND elongatedness > 1.4
 # Q2.1: What is the correlation between migration and elongatedness in this new dataset?
 # Q2.2: Draw an XY plot showing the relationship between these two variables in this new dataset
-migration_filter <- (migmorph$migration < 0.9) & (migmorph$migration > 0.4)
-morphology_filter <- migmorph$elongatedness > 1.4
-migmorph_filtered <- migmorph[(migration_filter & morphology_filter), ]
+
+
 # Q3: Write the data.frame from Q2 to a new file named filtered_data.csv
-write.csv(x = migmorph_filtered, file = "/Users/srao/Downloads/filtered_data.csv")
+
+#### Problem set 2 ####
+# Q1: Rename the columns of the migmorph dataframe by adding the suffix "_new" 
+# to all of them.
+
+
+# Q2: Find out the migration and elongatedness values for the JUN gene.
+
+
+# Q3: Is the migration value for the TNFRSF1B gene less than the migration value 
+# for the RET gene?
+
+
+# Q4: Find out the mean of the elongatedness column; create a new column called 
+# "elongatedness_centred" in migmorph by dividing the elongatedness values by the 
+# mean elongatedness.
+

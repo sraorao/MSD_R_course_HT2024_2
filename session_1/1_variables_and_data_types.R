@@ -1,5 +1,5 @@
 ###R for biologists
-##Irina & Rao, 23/01/2024
+##Bea & Rao, 05/02/2024
 
 #### constants - unchanging elements in R####
 2
